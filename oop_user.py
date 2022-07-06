@@ -13,6 +13,7 @@ class User:
         print(f"Last name: {self.last_name}")
         print(f"Email: {self.email}")
         print(f"Age: {self.age}")
+        return self
 
     def enroll(self):
         if self.is_rewards_member:
@@ -23,6 +24,7 @@ class User:
         
         self.gold_card_points = 200
         print(f"Your initial rewards' points balance is: {self.gold_card_points}")
+        return self
 
     def spend_points(self, amount):
         updated_points = self.gold_card_points - amount
@@ -30,13 +32,10 @@ class User:
           print(f'Sorry, that exceeds your points balance')
         else:
           print(f'Congrats on your purchases! Your updated points balance is: {updated_points}')
+        return self
 
 user_helen = User('Helen', 'Miller', 'helen@gmail.com', 32)
-user_helen.display_info()
-user_helen.enroll()
-user_helen.spend_points(50)
+user_helen.display_info().enroll().spend_points(50)
 
 user_john = User('John', 'White', 'john@yahoo.com', 28)
-user_john.display_info()
-user_john.enroll()
-user_john.spend_points(210)
+user_john.display_info().enroll().spend_points(210)

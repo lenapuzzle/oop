@@ -8,10 +8,10 @@ bicycle.player_hand()
 bicycle.computer_hand()
 
 print("*****WAR GAME*****")
-# print("***Player's hand***")
-# bicycle.show_player_hand()
-# print("***Computer's hand***")
-# bicycle.show_computer_hand()
+print("***Player's hand***")
+bicycle.show_player_hand()
+print("***Computer's hand***")
+bicycle.show_computer_hand()
 
 # game play
 # player1 = input("Please, pick your card")

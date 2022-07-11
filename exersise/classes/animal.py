@@ -1,13 +1,15 @@
 
 class Animal:
-  def __init__(self, name, owner):
-    self.name = name
-    self.owner = owner
+    def __init__(self, name, owner, breed):
+        self.name = name
+        self.owner = owner
+        self.breed = breed
 
     def print_info(self):
-      print(f'Name of animal: {self.name}')
-      print(f'Owner: {self.owner}')
+        print(f'Name of an animal: {self.name}')
+        print(f'Owner: {self.owner}')
+        print(f'Breed: {self.breed}')
 
-    # Polymorphism
+        # Polymorphism - leaves it to child classes to implement their own methods
     def walk_animal(self):
-      raise NotImplementedError
+        raise NotImplementedError

@@ -4,13 +4,12 @@ class Cat(Animal):
     list_of_cats = []
 
     def __init__(self, name, owner, breed, age):
-        super().__init__(name, owner)
-        self.breed = breed
+        super().__init__(name, owner, breed)
         self.age = age
         Cat.list_of_cats.append(self)
 
     def walk_animal(self):
-        print("I don't need to pet a human...")
+        print("I don't need to be pet, human...")
 
     def print_info(self):
         super().print_info()
